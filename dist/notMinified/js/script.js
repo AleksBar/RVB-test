@@ -4700,6 +4700,7 @@ document.addEventListener("DOMContentLoaded", function () {
       headerCont = document.querySelector('.header__container'),
       overlay = document.querySelector('.overlay'),
       overlayBtn = document.querySelector('.overlay__cont-close'),
+      overlayCont = document.querySelector('.overlay__cont-img'),
       body = document.querySelector('body'),
       aboutImg = document.querySelector('.about__img'),
       burger = document.querySelector('.burger'),
@@ -4729,8 +4730,11 @@ document.addEventListener("DOMContentLoaded", function () {
         var position;
         burger.classList.remove('burger_active');
         overlay.classList.remove('overlay_active');
+        overlay.classList.remove('overlay_show');
         body.classList.remove('body-block');
         menu.classList.remove('header__menu_active');
+        overlayBtn.classList.add('hidden');
+        overlayCont.innerHTML = '';
         anchors.forEach(function (anchor) {
           if (_this7.getAttribute('data-scrollbtn') === 'home') {
             scrlto(0);
@@ -4791,6 +4795,8 @@ document.addEventListener("DOMContentLoaded", function () {
       burger.classList.remove('burger_active');
       body.classList.remove('body-block');
       overlay.classList.remove('overlay_active');
+      overlay.classList.remove('overlay_show');
+      overlayCont.innerHTML = '';
     });
 
     function addPaddingForBodyWithPopup() {
@@ -4914,13 +4920,16 @@ document.addEventListener("DOMContentLoaded", function () {
         if (burger.classList.contains(elemClass + '_active')) {
           burger.classList.remove(elemClass + '_active');
           overlay.classList.remove('overlay_active');
+          overlay.classList.remove('overlay_show');
           menu.classList.remove('header__menu_active');
           body.classList.remove('body-block');
         } else {
           burger.classList.add(elemClass + '_active');
           overlay.classList.add('overlay_active');
+          overlayBtn.classList.add('hidden');
           menu.classList.add('header__menu_active');
           body.classList.add('body-block');
+          overlayCont.innerHTML = '';
         }
       });
     }
@@ -4936,17 +4945,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function aboutScript() {
     aboutImg.addEventListener('click', function () {
-      var overlayCont = document.querySelector('.overlay__cont-img');
       var img = this.innerHTML;
-      overlay.classList.add('overlay_active');
+      overlayBtn.classList.remove('hidden');
+      overlay.classList.add('overlay_show');
       body.classList.add('body-block');
       headerCont.classList.add('ind-r');
       overlayCont.innerHTML = img;
     });
     overlayBtn.addEventListener('click', function () {
-      overlay.classList.remove('overlay_active');
+      overlayBtn.classList.add('hidden');
+      overlay.classList.remove('overlay_show');
       body.classList.remove('body-block');
       headerCont.classList.remove('ind-r');
+      overlayCont.innerHTML = '';
     });
   }
 

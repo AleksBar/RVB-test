@@ -87,7 +87,7 @@ html, body {
     width: 100vw;
     height: 100vh;
     z-index: 5;
-    &_active {
+    &_active, &_show {
         display: block;
     }
     &__bg {
@@ -153,6 +153,11 @@ html, body {
             }
         }
     }
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
 }
 
 .pad-r {

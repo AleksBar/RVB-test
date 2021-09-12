@@ -7,6 +7,8 @@ function closeOverlay() {
         burger.classList.remove('burger_active');
         body.classList.remove('body-block');
         overlay.classList.remove('overlay_active');
+        overlay.classList.remove('overlay_show');
+        overlayCont.innerHTML = '';
     });
 
     function addPaddingForBodyWithPopup() {

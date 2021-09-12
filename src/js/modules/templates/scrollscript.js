@@ -18,8 +18,11 @@ function scrollScript() {
     
             burger.classList.remove('burger_active');
             overlay.classList.remove('overlay_active');
+            overlay.classList.remove('overlay_show');
             body.classList.remove('body-block');
             menu.classList.remove('header__menu_active');
+            overlayBtn.classList.add('hidden');
+            overlayCont.innerHTML = '';
     
             anchors.forEach((anchor) => {
                 if(this.getAttribute('data-scrollbtn') === 'home') {

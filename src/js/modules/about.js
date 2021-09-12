@@ -1,17 +1,19 @@
 /* ======= about ========= */
 function aboutScript() {
     aboutImg.addEventListener('click', function () {
-        let overlayCont = document.querySelector('.overlay__cont-img');
         let img = this.innerHTML;
-        overlay.classList.add('overlay_active');
+        overlayBtn.classList.remove('hidden');
+        overlay.classList.add('overlay_show');
         body.classList.add('body-block');
         headerCont.classList.add('ind-r');
         overlayCont.innerHTML = img;
     });
     overlayBtn.addEventListener('click', function () {
-        overlay.classList.remove('overlay_active');
+        overlayBtn.classList.add('hidden');
+        overlay.classList.remove('overlay_show');
         body.classList.remove('body-block');
         headerCont.classList.remove('ind-r');
+        overlayCont.innerHTML = '';
     });
 }
 aboutScript();

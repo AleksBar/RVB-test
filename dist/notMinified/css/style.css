@@ -540,7 +540,7 @@ html, body {
   height: 100vh;
   z-index: 5;
 }
-.overlay_active {
+.overlay_active, .overlay_show {
   display: block;
 }
 .overlay__bg {
@@ -814,6 +814,11 @@ html, body {
   text-decoration: none;
   color: #D22020;
   border: 1px solid #D22020;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .pad-r {
