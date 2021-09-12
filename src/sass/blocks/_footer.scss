@@ -1,0 +1,33 @@
+.footer {
+    padding: 25px 0;
+    border-top: 1px solid #ACB5BD;
+    &__text {
+        margin: 0;
+        padding: 0;
+        @include flex-center;
+        @include get-media-pf(sm){
+            flex-direction: column;
+        }
+        &-item {
+            list-style-type: none;
+            margin-right: 24px;
+            font-size: 16px;
+            color: #ADB5BD;
+            &:last-child {
+                margin-right: 0;
+            }
+            @include get-media-pf(sm){
+                margin-right: 0;
+                margin-top: 16px;
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    .icon {
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+    }
+}

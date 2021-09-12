@@ -1,0 +1,32 @@
+.promo {
+    min-height: 100vh;
+    background: url(../img/promo-bg.jpg) center center / cover no-repeat;
+    &__container {
+        padding-top: 110px;
+        min-height: inherit;
+        position: relative;
+    }
+    &__title {
+        max-width: 212px;
+        font-weight: 400;
+        font-size: 16px;
+        color: $text-color-b2;
+    }
+    &__social {
+        position: absolute;
+        bottom: 35px;
+        right: 20px;
+        @include get-media-pf(sm){
+            right: 16px;
+        }
+    }
+    &__arrow {
+        position: absolute;
+        width: 20px;
+        height: 17.5px;
+        @include flex-center;
+        transform: rotate(90deg) translateX(-50%);
+        left: 50%;
+        bottom: 45px;
+    }
+}

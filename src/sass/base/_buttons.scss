@@ -1,0 +1,40 @@
+.button {
+    height: 45px;
+    padding: 0 20px;
+    font-weight: 500;
+    font-size: 16px;
+    color: $text-color-w;
+    background: $button-color-r;
+    border-radius: 50px;
+    border: none;
+    white-space: nowrap;
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 2px #000000 inset, 0 0 2px #000000;
+    }
+    @include get-media-pf(480){
+        width: 100%;
+    }
+    &_white {
+        font-weight: 400;
+        font-size: 18px;
+        text-transform: uppercase;
+        height: 72px;
+        color: $text-color-r;
+        letter-spacing: 0.02em;
+        background: $color-w;
+        border: 1px solid $text-color-r;
+        border-radius: 56px;
+        padding: 0 70px;
+    }
+    &__portfolio {
+        @include get-media-pf(480){
+            width: calc(100% - 32px);
+        }
+    }
+    &__form {
+        height: 68px;
+        padding: 0 32px;
+        font-size: 24px;
+    }
+}

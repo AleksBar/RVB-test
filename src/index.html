@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <div class="full-screen">
+        @@include('header.html')
+        @@include('promo.html')
+        @@include('portfolio.html')
+        @@include('about.html')
+        @@include('feedback.html')
+        @@include('footer.html')
+        <div class="overlay">
+            <div class="overlay__bg"></div>
+            <div class="overlay__cont">
+                <div class="overlay__cont-img"></div>
+                <a href="#" class="overlay__cont-close">Закрыть</a>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="js/script.min.js"></script>
+</body>
+</html>

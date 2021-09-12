@@ -1,0 +1,90 @@
+.header {
+    $header-height: 93px;
+    min-height: $header-height;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: top .3s;
+    z-index: 10;
+    &__container {
+        min-height: $header-height;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__menu {
+        min-height: $header-height;
+        display: flex;
+        align-items: center;
+        transition: left .3s;
+        z-index: 8;
+        @include get-media-pf(sm) {
+            position: fixed;
+            display: block;
+            background: #fff;
+            padding: 93px 20px 0 20px;
+            overflow-y: auto;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: -110%;
+            &_active {
+                left: 0;
+            }
+        }
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        @include get-media-pf(sm){
+            flex-direction: column;
+        }
+    }
+    &__list-item {
+        list-style-type: none;
+        position: relative;
+        &::before {
+            @include text-underline(#000);
+        }
+        &:hover {
+            &::before {
+                transform: scale(1);
+            }
+        }
+        @include get-media-pf(sm){
+            width: fit-content;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 16px;
+            font-weight: 400;
+            font-size: 16px;
+            white-space: nowrap;
+            &:hover {
+                text-decoration: none;
+            }
+            @include get-media-pf(sm){
+                padding: 10px 0;
+            }
+        }
+    }
+    &__button {
+        margin-left: 15px;
+        @include get-media-pf(sm){
+            display: none;
+        }
+    }
+    &__logo, &__burger {
+        z-index: 9;
+    }
+    &_fixing {
+        top: -100px;
+    }
+    &_fixed {
+        background: #e2e2e2;
+        position: fixed;
+        top: 0;
+        border-bottom: 1px solid $color-r;
+    }
+}

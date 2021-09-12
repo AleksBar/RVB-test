@@ -1,0 +1,82 @@
+// <div class="burger">
+//     <div class="burger__wrapper">
+//         <span class="burger__top-line"></span>
+//         <span class="burger__mid-line"></span>
+//         <span class="burger__bot-line"></span>
+//     </div>
+// </div>
+
+//  ^^^^^^^ for copy
+
+// ========  variables ===========
+$burger-width: 24px;
+$burger-height: 16px;
+$burger-padding: 5px;
+$burger-line-height: 3px;
+$burger-color: $text-color-b;
+$burger-color_active: $text-color-b;
+$burger-transition: all .3s;
+$burger-radius: 10px;
+$burger-index-z: 3;
+
+// ========== adaptive ============
+@mixin burger-adaptive {
+    @include get-media-mf(esm) {
+        display: block;
+    }
+    @include get-media-mf(md) {
+        display: none;
+    }
+}
+
+// main code
+.burger {
+    padding-top: $burger-padding;
+    padding-right: $burger-padding;
+    padding-bottom: $burger-padding;
+    padding-left: $burger-padding;
+    z-index: $burger-index-z;
+    @include burger-adaptive;
+    &__wrapper {
+        position: relative;
+        width: $burger-width;
+        height: $burger-height;
+    }
+    span {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: $burger-line-height;
+        background: $burger-color;
+        border-radius: $burger-radius;
+    }
+    &__top-line, &__mid-line, &__bot-line {
+        transition: $burger-transition;
+    }
+    &__top-line {
+        top: 0;
+    }
+    &__mid-line {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &__bot-line {
+        bottom: 0;
+    }
+    &_active {
+        span {
+            background: $burger-color_active;
+        }
+        .burger__top-line {
+            top: 50%;
+            transform: translateY(-50%) rotate(225deg);
+        }
+        .burger__mid-line {
+            transform: translateY(-50%) scale(0px);
+        }
+        .burger__bot-line {
+            bottom: 50%;
+            transform: translateY(50%) rotate(-225deg);
+        }
+    }
+}

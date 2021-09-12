@@ -1,0 +1,101 @@
+.feedback {
+    padding: 30px 0 240px 0;
+    @include get-media-pf(sm){
+        padding-bottom: 255px;
+    }
+    &__container {
+        position: relative;
+    }
+    &__main-cont {
+        margin-top: 30px;
+        display: grid;
+        grid-template: 1fr / 30% 66%;
+        gap: 30px;
+        justify-content: space-between;
+        @include get-media-pf(sm){
+            grid-template: 1fr / 1fr;
+        }
+    }
+    &__manager {
+        padding-top: 23px;
+        @include get-media-pf(sm){
+            text-align: center;
+        }
+        @include get-media-pf(480){
+            text-align: left;
+        }
+        &-img {
+            width: 200px;
+            @include get-media-pf(sm){
+                margin: 0 auto;
+            }
+            @include get-media-pf(480){
+                margin: 0;
+            }
+            img {
+                max-width: 100%;
+            }
+        }
+        &-title {
+            margin-top: 32px;
+            font-weight: 600;
+            font-size: 24px;
+            letter-spacing: -0.03em;
+            color: $text-color-title;
+        }
+        &-subtitle {
+            margin-top: 5px;
+            font-weight: 400;
+            font-size: 18px;
+            color: $text-color-b2;
+        }
+    }
+    &__form {
+        @include get-media-pf(sm){
+            margin-top: 32px;
+        }
+    }
+    &__download {
+        position: absolute;
+        left: 20px;
+        bottom: -90px;
+        max-width: 250px;
+        @include get-media-interval(md, md){
+            max-width: 210px;
+        }
+        @include get-media-pf(sm){
+            bottom: 0;
+            transform: translateY(calc(100% + 32px));
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 24px;
+            letter-spacing: -0.03em;
+            color: $text-color-title;
+        }
+        &-links {
+            margin-top: 17px;
+            display: flex;
+            flex-direction: column;
+        }
+        &-link {
+            margin-top: 8px;
+            width: fit-content;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 35px;
+            color: $text-color-r;
+            border-bottom: 1px solid rgba(210, 32, 32, 0.4);
+            &:first-child {
+                margin-top: 0;
+            }
+            &:hover {
+                color: $text-color-r;
+                text-decoration: none;
+            }
+            span {
+                font-size: 11.5px;
+            }
+        }
+    }
+}

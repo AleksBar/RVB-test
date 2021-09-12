@@ -1,0 +1,115 @@
+.about {
+    padding-top: 35px;
+    &__stat {
+        margin-top: 60px;
+        &-list {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            @include get-media-pf(sm){
+                flex-direction: column;
+            }
+        }
+        &-item {
+            list-style-type: none;
+            margin-right: 32px;
+            font-weight: 400;
+            font-size: 32px;    
+            letter-spacing: -0.03em;
+            color: $text-color-b2;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &-num {
+            margin-right: 12px;
+            font-weight: 400;
+            font-size: 32px;
+            color: $text-color-r;
+        }
+    }
+    &__main-cont {
+        margin-top: 60px;
+        display: grid;
+        grid-template: 1fr / repeat(2, 1fr);
+        gap: 20px;
+        @include get-media-pf(md){
+            grid-template: 1fr / 1fr;
+            gap: 32px;
+        }
+        @include get-media-pf(sm){
+            margin-top: 30px;
+        }
+    }
+    &__achiev {
+        margin-top: 65px;
+        @include get-media-pf(sm){
+            margin-top: 32px;
+        }
+        &-list {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            @include get-media-pf(md){
+                justify-content: center;
+            }
+            @include get-media-pf(esm){
+                flex-direction: column;
+            }
+        }
+        &-item {
+            max-width: 140px;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            margin-right: 32px;
+            &:last-child {
+                margin-right: 0;
+            }
+            @include get-media-pf(md){
+                max-width: 200px;
+            }
+            @include get-media-pf(esm){
+                max-width: none;
+                margin-top: 35px;
+            }
+        }
+        &-num {
+            font-weight: 600;
+            font-size: 40px;
+            letter-spacing: -0.03em;
+            color: $text-color-r;
+        }
+        &-text {
+            margin-top: 12px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            color: $text-color-b2;
+        }
+    }
+    &__button {
+        margin-top: 40px;
+        @include get-media-pf(md){
+            display: block;
+            margin: 0 auto;
+            margin-top: 32px;
+        }
+    }
+    &__img {
+        cursor: pointer;
+    }
+    &__img-box {
+        text-align: center;
+        img {
+            max-width: 100%;
+        }
+    }
+    &__img-descr {
+        margin-top: 8px;
+        font-weight: 400;
+        font-size: 16px;
+        color: #8D959D;
+    }
+}

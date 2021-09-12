@@ -1,0 +1,51 @@
+@include font("Inter", "Inter-Medium", "500", "normal");
+@include font("Inter", "Inter-Regular", "400", "normal");
+@include font("Inter", "Inter-SemiBold", "600", "normal");
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../iconic-font/icomoon.eot?5wjros');
+    src:  url('../iconic-font/icomoon.eot?5wjros#iefix') format('embedded-opentype'),
+      url('../iconic-font/icomoon.ttf?5wjros') format('truetype'),
+      url('../iconic-font/icomoon.woff?5wjros') format('woff'),
+      url('../iconic-font/icomoon.svg?5wjros#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-link-arrow_right:before {
+    content: "\e900";
+    color: #d22020;
+  }
+  .icon-link-arrow_top-right:before {
+    content: "\e901";
+    color: rgba(210, 32, 32, 0.4);
+  }
+  .icon-logo:before {
+    content: "\e902";
+    color: #d22020;
+  }
+  .icon-social__telegram:before {
+    content: "\e903";
+    color: #8d959d;
+  }
+  .icon-social__whatsapp:before {
+    content: "\e904";
+    color: #8d959d;
+  }

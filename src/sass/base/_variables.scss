@@ -1,0 +1,45 @@
+// colors
+$color-b: #000000;
+$color-w: #fff;
+$color-r: #D22020;
+$bg-color-w: $color-w;
+$button-color-r: $color-r;
+
+// text-colors
+$text-color-b: $color-b;
+$text-color-b2: #343A40;
+$text-color-title: #212529;
+$text-color-w: $color-w;
+$text-color-r: $color-r;
+$text-color-g: #6C757D;
+
+// fonts
+$main-font: 'Inter', sans-serif;
+
+$safeZone: 20px;
+$maket: 1440;
+$maxContentWidth: 1380;
+// $minContentWidth: 1462;
+
+$container-width: $maxContentWidth + $safeZone;
+$container-margin: 0 auto;
+$container-padding: 0 $safeZone;
+
+// breakpoints
+$breakpoints-mf: (
+    esm: 320,
+    sm: 576,
+    md: 768,
+    lg: 992,
+    xl: 1200,
+    xxl: 1400,
+    def: $maxContentWidth
+);
+
+$breakpoints-pf: (
+    esm: 575.98,
+    sm: 767.98,
+    md: 991.98,
+    lg: 1199.98,
+    xl: 1399.98
+);

@@ -1,0 +1,51 @@
+.form {
+    width: auto;
+    &__item {
+        max-width: 560px;
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        &:first-child{
+            margin-top: 0;
+        }
+        @include get-media-pf(sm){
+            max-width: none;
+        }
+        &_long {
+            max-width: none;
+        }
+        label {
+            font-weight: 400;
+            font-size: 24px;
+            color: #ADB5BD;
+            span {
+                @extend label;
+                @include get-media-pf(480){
+                    display: none;
+                }
+            }
+        }
+    }
+    &__input, &__text-area {
+        padding: 10px 0;
+        font-weight: 400;
+        font-size: 16px;
+        color: $text-color-b;
+        border: none;
+        border-bottom: 1px solid #CED4DA;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__text-area {
+        resize: none;
+    }
+    &__button {
+        margin-top: 32px;
+    }
+    .js-validate-error-field {
+        border: none !important;
+        border-bottom: 1px solid rgb(184, 17, 17) !important;
+    }
+}

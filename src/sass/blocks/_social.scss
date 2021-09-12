@@ -1,0 +1,38 @@
+.social {
+    display: flex;
+    &__item {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+        position: relative;
+        &:hover {
+            text-decoration: none;
+            .social__text {
+                &::before {
+                    transform: scale(1);
+                }
+            }
+        }
+        @include get-media-pf(sm){
+            margin-right: 11px;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 18px;
+        color: $text-color-b2;
+        margin-left: 10px;
+        text-transform: uppercase;
+        position: relative;
+        &::before {
+            @include text-underline($text-color-b2);
+        }
+        @include get-media-pf(sm){
+            display: none;
+        }
+    }
+}
