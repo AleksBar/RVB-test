@@ -35,17 +35,14 @@ function headerScript() {
             if(burger.classList.contains(elemClass + '_active')){
                 burger.classList.remove(elemClass + '_active');
                 overlay.classList.remove('overlay_active');
-                // overlay.classList.remove('overlay_active-max');
                 menu.classList.remove('header__menu_active');
                 body.classList.remove('body-block');
-                // popup.classList.remove('popup_active');
             }
             else {
                 burger.classList.add(elemClass + '_active');
                 overlay.classList.add('overlay_active');
                 menu.classList.add('header__menu_active');
                 body.classList.add('body-block');
-                // popup.classList.remove('popup_active');
             }
         });
     }
